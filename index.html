@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AIDEN MUNGER OS</title>
+  <meta name="description" content="Aiden Munger OS — you weren't supposed to find this.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="scanlines"></div>
+  <div id="boot" class="screen">
+    <div class="boot-box">
+      <div class="brand">AIDEN MUNGER OS <span>v2.026</span></div>
+      <div class="boot-line" id="bootText">Initializing system...</div>
+      <div class="progress"><div id="progressBar"></div></div>
+      <div class="boot-status" id="bootStatus">PLEASE WAIT</div>
+      <button id="enterBtn" class="hidden">[ ENTER SYSTEM ]</button>
+    </div>
+  </div>
+
+  <main id="desktop" class="desktop hidden">
+    <div class="wallpaper-grid"></div>
+    <div class="desktop-title">
+      <div>AIDEN MUNGER OS</div>
+      <small>USER: GUEST · STATUS: <span class="green">ONLINE</span></small>
+    </div>
+
+    <section class="icons">
+      <button class="icon" data-window="about"><span>📁</span><b>AIDEN</b></button>
+      <button class="icon" data-window="lore"><span>🧠</span><b>LORE</b></button>
+      <button class="icon" data-window="photos"><span>📷</span><b>PHOTOS</b></button>
+      <button class="icon" data-window="games"><span>🎮</span><b>GAMES</b></button>
+      <button class="icon" data-window="music"><span>💿</span><b>MUSIC</b></button>
+      <button class="icon" data-window="archives"><span>🗃️</span><b>ARCHIVES</b></button>
+      <button class="icon" data-window="terminal"><span>⌨️</span><b>TERMINAL</b></button>
+      <button class="icon secret-icon" id="classifiedIcon"><span>🔒</span><b>CLASSIFIED</b></button>
+      <button class="icon" data-window="trash"><span>🗑️</span><b>TRASH</b></button>
+    </section>
+
+    <div id="windows"></div>
+
+    <div class="taskbar">
+      <button id="startBtn" class="start">◉ START</button>
+      <div id="taskItems"></div>
+      <div class="clock" id="clock"></div>
+    </div>
+
+    <div id="startMenu" class="start-menu hidden">
+      <div class="menu-header">AIDEN MUNGER OS</div>
+      <button data-window="about">📁 About Aiden</button>
+      <button data-window="terminal">⌨️ Terminal</button>
+      <button data-window="games">🎮 Games</button>
+      <button data-window="archives">🗃️ Archives</button>
+      <button id="shutdown">⏻ Shut down</button>
+    </div>
+  </main>
+
+  <div id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
