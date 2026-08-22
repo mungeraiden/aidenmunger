@@ -1,62 +1,74 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>AIDEN MUNGER OS</title>
-  <meta name="description" content="Aiden Munger OS — you weren't supposed to find this.">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rate Your Experience · Aiden Munger</title>
+<meta name="description" content="Rate your experience with Aiden Munger.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="scanlines"></div>
-  <div id="boot" class="screen">
-    <div class="boot-box">
-      <div class="brand">AIDEN MUNGER OS <span>v2.026</span></div>
-      <div class="boot-line" id="bootText">Initializing system...</div>
-      <div class="progress"><div id="progressBar"></div></div>
-      <div class="boot-status" id="bootStatus">PLEASE WAIT</div>
-      <button id="enterBtn" class="hidden">[ ENTER SYSTEM ]</button>
-    </div>
-  </div>
+<div class="noise"></div>
+<nav><a class="logo" href="#">AM<span>.</span></a><span>FEEDBACK / 001</span></nav>
 
-  <main id="desktop" class="desktop hidden">
-    <div class="wallpaper-grid"></div>
-    <div class="desktop-title">
-      <div>AIDEN MUNGER OS</div>
-      <small>USER: GUEST · STATUS: <span class="green">ONLINE</span></small>
-    </div>
+<main>
+  <section class="hero">
+    <div class="eyebrow"><span></span> AIDEN MUNGER · FEEDBACK PORTAL</div>
+    <h1>How was<br>your <em>experience?</em></h1>
+    <p>Be honest. Be brutal. Be nice. This is your chance to tell me what you actually think.</p>
+  </section>
 
-    <section class="icons">
-      <button class="icon" data-window="about"><span>📁</span><b>AIDEN</b></button>
-      <button class="icon" data-window="lore"><span>🧠</span><b>LORE</b></button>
-      <button class="icon" data-window="photos"><span>📷</span><b>PHOTOS</b></button>
-      <button class="icon" data-window="games"><span>🎮</span><b>GAMES</b></button>
-      <button class="icon" data-window="music"><span>💿</span><b>MUSIC</b></button>
-      <button class="icon" data-window="archives"><span>🗃️</span><b>ARCHIVES</b></button>
-      <button class="icon" data-window="terminal"><span>⌨️</span><b>TERMINAL</b></button>
-      <button class="icon secret-icon" id="classifiedIcon"><span>🔒</span><b>CLASSIFIED</b></button>
-      <button class="icon" data-window="trash"><span>🗑️</span><b>TRASH</b></button>
-    </section>
+  <section class="card">
+    <form id="feedbackForm">
+      <div class="question">
+        <label>01 / OVERALL EXPERIENCE</label>
+        <div class="rating" role="radiogroup" aria-label="Overall experience">
+          <button type="button" data-value="1">1</button><button type="button" data-value="2">2</button>
+          <button type="button" data-value="3">3</button><button type="button" data-value="4">4</button>
+          <button type="button" data-value="5">5</button>
+        </div>
+        <div class="scale"><span>ROUGH</span><span>ABSOLUTELY GOATED</span></div>
+        <input type="hidden" id="rating" name="rating" required>
+      </div>
 
-    <div id="windows"></div>
+      <div class="question">
+        <label for="best">02 / WHAT DID AIDEN DO WELL?</label>
+        <textarea id="best" name="best" placeholder="Tell me what worked..."></textarea>
+      </div>
 
-    <div class="taskbar">
-      <button id="startBtn" class="start">◉ START</button>
-      <div id="taskItems"></div>
-      <div class="clock" id="clock"></div>
-    </div>
+      <div class="question">
+        <label for="improve">03 / WHAT COULD BE BETTER?</label>
+        <textarea id="improve" name="improve" placeholder="Don't hold back..."></textarea>
+      </div>
 
-    <div id="startMenu" class="start-menu hidden">
-      <div class="menu-header">AIDEN MUNGER OS</div>
-      <button data-window="about">📁 About Aiden</button>
-      <button data-window="terminal">⌨️ Terminal</button>
-      <button data-window="games">🎮 Games</button>
-      <button data-window="archives">🗃️ Archives</button>
-      <button id="shutdown">⏻ Shut down</button>
-    </div>
-  </main>
+      <div class="question">
+        <label for="vibe">04 / DESCRIBE AIDEN IN THREE WORDS</label>
+        <input id="vibe" name="vibe" maxlength="100" placeholder="e.g. funny, chaotic, helpful">
+      </div>
 
-  <div id="toast"></div>
-  <script src="script.js"></script>
+      <div class="question">
+        <label for="name">05 / WHO ARE YOU? <small>OPTIONAL</small></label>
+        <input id="name" name="name" maxlength="80" placeholder="Your name or nickname">
+      </div>
+
+      <div class="question last">
+        <label for="private">06 / ANYTHING ELSE?</label>
+        <textarea id="private" name="private" placeholder="Anything I should know?"></textarea>
+      </div>
+
+      <button class="submit" type="submit">SUBMIT FEEDBACK <span>↗</span></button>
+      <p class="status" id="status"></p>
+    </form>
+  </section>
+
+  <section class="footer-note">
+    <span>THANKS FOR BEING REAL.</span>
+    <span>© 2026 AIDEN MUNGER</span>
+  </section>
+</main>
+<script src="script.js"></script>
 </body>
 </html>

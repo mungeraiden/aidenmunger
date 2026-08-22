@@ -1,28 +1,35 @@
-# Aiden Munger OS
+# AidenMunger.com — Feedback Site
 
-A gimmicky interactive personal website for **aidenmunger.com**.
+This version gives visitors a polished "Rate Your Experience With Aiden" form and stores every response in a Google Sheet.
 
-## Run it
+## Setup
 
-Open `index.html` in a browser, or upload the three files to your web host.
+### 1. Create the database
+Create a blank Google Sheet. You can name it `Aiden Feedback`.
 
-## Deploy
+### 2. Add the backend
+In the Sheet, go to **Extensions → Apps Script**.
 
-The site is static HTML/CSS/JS, so it works with GitHub Pages, Netlify, Vercel, Cloudflare Pages, or ordinary web hosting.
+Replace the default code with `google-apps-script.js` from this folder.
 
-## Current features
+Click **Deploy → New deployment**.
+- Type: **Web app**
+- Execute as: **Me**
+- Who has access: **Anyone**
 
-- Fake boot sequence
-- Desktop-style interface
-- Draggable windows
-- Terminal with commands
-- Local-storage secret progression
-- Classified section
-- Mini guessing game
-- Easter egg for typing "aiden"
-- CRT scanline effect
-- Responsive mobile layout
+Copy the Web app URL.
 
-## Next upgrades
+### 3. Connect the website
+Open `script.js` and replace:
 
-Replace the placeholder content with real Aiden lore/photos/music, add a proper puzzle chain, more games, sound effects, a custom cursor, and a final "you weren't supposed to find this" ending.
+`PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE`
+
+with your Web app URL.
+
+### 4. Put it on GitHub Pages
+Upload `index.html`, `style.css`, and `script.js` to your GitHub Pages repository.
+
+Your Google Sheet becomes the private dashboard where all responses are stored.
+
+## Important
+Do not put private API keys in the frontend. This setup uses a Google Sheet + Apps Script, so the site can stay static and work with GitHub Pages.
