@@ -1,4 +1,4 @@
-const ENDPOINT = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+const ENDPOINT = "https://script.google.com/macros/s/AKfycbx4GrHh1MWP4qFwH_oA1Sw0S9YX1IMNzLkDRLI5Mzlq1pFeQZ4RH7AzXpi4h4RRyK8N/exec";
 
 const ratingButtons = [...document.querySelectorAll(".rating button")];
 const ratingInput = document.querySelector("#rating");
